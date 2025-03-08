@@ -61,9 +61,6 @@ flatpak override --user --unset-env=QT_QPA_PLATFORMTHEME
 # smaller cursor on GTK apps - should be fixed by F42 with GTK 4.17
 flatpak override --user --env=USE_POINTER_VIEWPORT=1
 
-# Handle privileged tasks
-pkexec /usr/libexec/ublue-privileged-user-setup
-
 # Prevent future executions
 echo "Writing state file"
 echo $USER_SETUP_VER > "$USER_SETUP_VER_FILE"
