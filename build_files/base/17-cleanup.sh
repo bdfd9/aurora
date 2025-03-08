@@ -49,7 +49,6 @@ dnf5 -y copr disable tulilirockz/fw-fanctrl
 # NOTE: we won't use dnf5 copr plugin for ublue-os/akmods until our upstream provides the COPR standard naming
 sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/_copr_ublue-os-akmods.repo
 sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/fedora-cisco-openh264.repo
-sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/hardware:razer.repo
 for i in /etc/yum.repos.d/rpmfusion-*; do
     sed -i 's@enabled=1@enabled=0@g' "$i"
 done

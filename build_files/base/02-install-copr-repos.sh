@@ -10,9 +10,6 @@ dnf5 -y copr enable ublue-os/staging
 # Add Packages repo
 dnf5 -y copr enable ublue-os/packages
 
-# Add OpenRazer repo
-dnf5 -y config-manager addrepo --from-repofile=https://openrazer.github.io/hardware:razer.repo
-
 # Enable repo for scx-scheds
 dnf5 -y copr enable bieszczaders/kernel-cachyos-addons
 

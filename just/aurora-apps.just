@@ -99,29 +99,6 @@ install-jetbrains-toolbox:
     echo "Launching JetBrains Toolbox"
     ./jetbrains-toolbox-"${BUILD_VERSION}"/jetbrains-toolbox
 
-# Install GUI apps for OpenRazer
-[group('Apps')]
-install-openrazer-frontend:
-    #!/usr/bin/env bash
-    source /usr/lib/ujust/ujust.sh
-    OPENRAZER_CONFIGURATOR_APP="None"
-    echo "${bold}Select OpenRazer Frontend Apps${normal}"
-    OPTION=$(Choose "Razer Genie" "Polychromatic" "Close")
-    if [[ "${OPTION,,}" =~ ^razer[[:space:]]genie ]]; then
-        echo "Installing Razer Genie..."
-        flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-        flatpak --system install -y flathub xyz.z3ntu.razergenie
-        OPENRAZER_CONFIGURATOR_APP="Razer Genie"
-    elif [[ "${OPTION,,}" =~ ^polychromatic ]]; then
-        echo "Installing Polychromatic..."
-        flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-        flatpak --system install -y flathub app.polychromatic.controller
-        OPENRAZER_CONFIGURATOR_APP="Polychromatic"
-    else
-        echo "Not Selecting GUI Frontend"
-    fi
-    echo "$OPENRAZER_CONFIGURATOR_APP is installed"
-
 # alias for install-incus
 [group('Apps')]
 incus:
