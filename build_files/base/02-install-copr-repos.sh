@@ -23,7 +23,7 @@ dnf5 -y copr enable zeno/scrcpy
 dnf5 -y copr enable kylegospo/obs-vkcapture
 
 # Enable nerd-fonts repo
-dnf5 -y copr enable he/nerd-fonts
+dnf5 -y copr enable che/nerd-fonts
 
 
 echo "::endgroup::"
