@@ -31,4 +31,8 @@ for i in /etc/yum.repos.d/rpmfusion-*; do
     sed -i 's@enabled=1@enabled=0@g' "$i"
 done
 
+dnf5 -y copr disable zeno/scrcpy
+dnf5 -y copr disable kylegospo/obs-vkcapture
+dnf5 -y copr disable he/nerd-fonts
+
 echo "::endgroup::"
