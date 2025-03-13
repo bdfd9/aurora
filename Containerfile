@@ -25,21 +25,21 @@ RUN --mount=type=cache,dst=/var/cache/libdnf5 \
     --mount=type=bind,from=ctx,source=/,target=/ctx \
     /ctx/build_files/shared/build-base.sh
 
-## aurora-dx developer edition image section
-FROM base AS dx
+# ## aurora-dx developer edition image section
+# FROM base AS dx
 
-ARG AKMODS_FLAVOR="coreos-stable"
-ARG BASE_IMAGE_NAME="kinoite"
-ARG FEDORA_MAJOR_VERSION="40"
-ARG IMAGE_NAME="aurora-dx"
-ARG IMAGE_VENDOR="ublue-os"
-ARG KERNEL="6.10.10-200.fc40.x86_64"
-ARG SHA_HEAD_SHORT="dedbeef"
-ARG UBLUE_IMAGE_TAG="stable"
-ARG VERSION=""
+# ARG AKMODS_FLAVOR="coreos-stable"
+# ARG BASE_IMAGE_NAME="kinoite"
+# ARG FEDORA_MAJOR_VERSION="40"
+# ARG IMAGE_NAME="aurora-dx"
+# ARG IMAGE_VENDOR="ublue-os"
+# ARG KERNEL="6.10.10-200.fc40.x86_64"
+# ARG SHA_HEAD_SHORT="dedbeef"
+# ARG UBLUE_IMAGE_TAG="stable"
+# ARG VERSION=""
 
-# Build, Clean-up, Commit
-RUN --mount=type=cache,dst=/var/cache/libdnf5 \
-    --mount=type=cache,dst=/var/cache/rpm-ostree \
-    --mount=type=bind,from=ctx,source=/,target=/ctx \
-    /ctx/build_files/shared/build-dx.sh
+# # Build, Clean-up, Commit
+# RUN --mount=type=cache,dst=/var/cache/libdnf5 \
+#     --mount=type=cache,dst=/var/cache/rpm-ostree \
+#     --mount=type=bind,from=ctx,source=/,target=/ctx \
+#     /ctx/build_files/shared/build-dx.sh
