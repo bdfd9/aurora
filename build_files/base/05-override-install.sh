@@ -4,10 +4,14 @@ echo "::group:: ===$(basename "$0")==="
 
 set -eoux pipefail
 
-# Fix for ID in fwupd
-dnf5 -y swap \
-    --repo=copr:copr.fedorainfracloud.org:ublue-os:staging \
-        fwupd fwupd
+
+# Patched shell
+if [[ "${UBLUE_IMAGE_TAG}" != "beta" ]]; then
+  # Fix for ID in fwupd
+  dnf5 -y swap \
+      --repo=copr:copr.fedorainfracloud.org:ublue-os:staging \
+          fwupd fwupd
+fi
 
 # TODO: Fedora 41 specific -- re-evaluate with Fedora 42
 # negativo's libheif is broken somehow on older Intel machines
@@ -19,7 +23,6 @@ dnf5 -y swap \
 dnf5 -y swap \
     --repo=fedora \
         heif-pixbuf-loader heif-pixbuf-loader
-
 
 # Starship Shell Prompt
 # shellcheck disable=SC2016
