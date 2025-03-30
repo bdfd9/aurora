@@ -13,9 +13,6 @@ dnf5 -y copr enable ublue-os/packages
 # Enable repo for scx-scheds
 dnf5 -y copr enable bieszczaders/kernel-cachyos-addons
 
-# Enable fw-fanctrl repo
-dnf5 -y copr enable tulilirockz/fw-fanctrl
-
 # Enable scrcpy repo
 dnf5 -y copr enable zeno/scrcpy
 
