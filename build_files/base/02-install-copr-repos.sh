@@ -25,4 +25,7 @@ dnf5 -y copr enable kylegospo/obs-vkcapture
 # Enable nerd-fonts repo
 dnf5 -y copr enable che/nerd-fonts
 
+# Podman-bootc
+dnf5 -y copr enable gmaglione/podman-bootc
+
 echo "::endgroup::"
