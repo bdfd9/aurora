@@ -55,6 +55,7 @@
 				"wireguard-tools",
 				"xprop",
 				"wl-clipboard",
+				"starship",
 
 
 
@@ -119,7 +120,9 @@
 				"podman-compose",
 				"podman-machine",
 				"podman-tui",
-				"podmansh"
+				"podmansh",
+
+				"tailscale"
 			],
 			"kinoite": [],
 			"dx": [
