@@ -15,6 +15,7 @@ systemctl enable check-sb-key.service
 
 # Disable all COPRs and RPM Fusion Repos and terra
 sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/negativo17-fedora-multimedia.repo
+sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/tailscale.repo
 
 # Disable coprs
 dnf5 -y copr disable ublue-os/staging
