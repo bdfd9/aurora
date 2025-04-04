@@ -122,7 +122,8 @@
 				"podman-tui",
 				"podmansh",
 
-				"tailscale"
+				"tailscale",
+				"obs-studio"
 			],
 			"kinoite": [],
 			"dx": [
