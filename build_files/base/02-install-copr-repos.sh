@@ -25,4 +25,6 @@ dnf5 -y copr enable che/nerd-fonts
 # Podman-bootc
 dnf5 -y copr enable gmaglione/podman-bootc
 
+dnf5 -y copr enable atim/starship
+
 echo "::endgroup::"
