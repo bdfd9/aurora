@@ -7,7 +7,7 @@ images := '(
 )'
 flavors := '(
     [main]=main
-    [main-yoga]=main-yoga
+    [yoga]=yoga
     [nvidia]=nvidia
     [nvidia-open]=nvidia-open
     [hwe]=hwe
