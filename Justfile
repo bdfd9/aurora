@@ -135,6 +135,8 @@ build $image="aurora" $tag="latest" $flavor="main" rechunk="0" ghcr="0" pipeline
         akmods_flavor="coreos-stable"
     elif [[ "${tag}" =~ beta ]]; then
         akmods_flavor="main"
+    elif [[ "${tag}" =~ yoga ]]; then
+        akmods_flavor="main"
     else
         akmods_flavor="main"
     fi
