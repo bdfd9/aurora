@@ -176,9 +176,9 @@ build $image="aurora" $tag="latest" $flavor="main" rechunk="0" ghcr="0" pipeline
     fi
 
     if [["${image_name}" == "aurora-yoga"]]; then
-        ghcr_image_name=aurora
+        ghcr_image_name="aurora"
     else
-        ghcr_image_name=${image_name}
+        ghcr_image_name="${image_name}"
     fi
 
     skopeo list-tags docker://ghcr.io/{{ repo_organization }}/${ghcr_image_name} > /tmp/repotags.json
