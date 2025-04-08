@@ -27,8 +27,6 @@ dnf5 -y copr enable gmaglione/podman-bootc
 
 dnf5 -y copr enable atim/starship
 
-if [[ "${IMAGE_NAME}" =~ yoga ]]; then
-  dnf5 -y copr enable danayer/linux-firmware-git
-fi
+dnf5 -y copr enable danayer/linux-firmware-git
 
 echo "::endgroup::"
