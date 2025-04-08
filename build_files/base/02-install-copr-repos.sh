@@ -27,6 +27,9 @@ dnf5 -y copr enable gmaglione/podman-bootc
 
 dnf5 -y copr enable atim/starship
 
-dnf5 -y copr enable danayer/linux-firmware-git
+if [[ "${IMAGE_NAME}" == "aurora-yoga" ]]; then
+  echo "Adding yoga specific coprs..."
+  dnf5 -y copr enable danayer/linux-firmware-git
+fi
 
 echo "::endgroup::"
