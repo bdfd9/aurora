@@ -5,10 +5,10 @@ on:
     inputs:
       brand_name:
         description: "Image Brand to Build"
-        default: '["aurora"]'
+        default: '["aurora", "aurora-yoga"]'
         type: choice
         options:
-          - '["aurora"]'
+          - '["aurora", "aurora-yoga"]'
 
 jobs:
   build-iso-stable:
