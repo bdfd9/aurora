@@ -30,7 +30,7 @@ dnf5 -y copr enable atim/starship
 if [[ "${IMAGE_NAME}" == "aurora-yoga" ]]; then
   echo "Adding yoga specific coprs..."
   dnf5 -y copr enable danayer/linux-firmware-git
-  dnf5 -y update
+  dnf5 -y update --refresh
 fi
 
 echo "::endgroup::"
