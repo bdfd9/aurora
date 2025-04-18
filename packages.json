@@ -3,8 +3,10 @@
 		"include": {
 			"all": [
 				"adcli",
+				"aurora-backgrounds",
 				"aurora-cli-logos",
 				"aurora-fastfetch",
+				"aurora-schemas",
 				"bash-color-prompt",
 				"bcache-tools",
 				"bootc",
@@ -165,8 +167,12 @@
 				"cockpit-storaged",
 				"cockpit-system",
 				"code",
+				"containerd.io",
 				"dbus-x11",
-				"devpod",
+				"docker-buildx-plugin",
+				"docker-ce",
+				"docker-ce-cli",
+				"docker-compose-plugin",
 				"edk2-ovmf",
 				"flatpak-builder",
 				"genisoimage",
@@ -228,19 +234,6 @@
 			"dx": []
 		}
 	},
-	"40": {
-		"include": {
-			"all": [],
-			"dx": [
-				"lxd",
-				"lxd-agent"
-			]
-		},
-		"exclude": {
-			"all": [],
-			"dx": []
-		}
-	},
 	"41": {
 		"include": {
 			"all": [
@@ -248,14 +241,7 @@
 				"epson-inkjet-printer-escpr2",
 				"google-noto-fonts-all"
 			],
-			"dx":[
-				"containerd.io",
-				"docker-buildx-plugin",
-				"docker-ce",
-				"docker-ce-cli",
-				"monaspace-nerd-fonts",
-				"docker-compose-plugin"
-			]
+			"dx":[]
 		},
 		"exclude": {
 			"all": [],
@@ -264,7 +250,11 @@
 	},
 	"42": {
 		"include": {
-			"all": ["google-noto-fonts-all"],
+			"all": [
+				"google-noto-fonts-all",
+				"uupd",
+				"fw-fanctrl"
+      		],
 			"dx": []
 		},
 		"exclude": {
