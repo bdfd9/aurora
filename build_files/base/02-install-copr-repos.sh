@@ -33,4 +33,7 @@ if [[ "${IMAGE_NAME}" == "aurora-yoga" ]]; then
   dnf5 -y update --refresh
 fi
 
+# Enable sunshine repo
+dnf5 -y copr enable lizardbyte/beta
+
 echo "::endgroup::"

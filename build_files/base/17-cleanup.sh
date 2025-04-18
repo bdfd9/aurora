@@ -13,9 +13,6 @@ systemctl enable usr-share-sddm-themes.mount
 systemctl --global enable ublue-user-setup.service
 systemctl enable check-sb-key.service
 
-# disable sunshine service
-systemctl --global disable sunshine.service
-
 # Disable all COPRs and RPM Fusion Repos and terra
 sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/negativo17-fedora-multimedia.repo
 sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/tailscale.repo
