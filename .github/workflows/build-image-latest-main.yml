@@ -21,7 +21,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        brand_name: ["aurora"]
+        brand_name: ["aurora", "aurora-yoga"]
     with:
       image_flavors: '["main", "nvidia", "nvidia-open"]'
       brand_name: ${{ matrix.brand_name }}
