@@ -149,7 +149,8 @@
 				"tailscale",
 				"obs-studio",
 
-				"shadow-utils"
+				"shadow-utils",
+				"perl-Image-ExifTool"
 			],
 			"dx": [
 				"adobe-source-code-pro-fonts",
