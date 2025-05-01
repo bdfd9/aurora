@@ -150,7 +150,9 @@
 				"obs-studio",
 
 				"shadow-utils",
-				"perl-Image-ExifTool"
+				"perl-Image-ExifTool",
+				
+				"acpica-tools"
 			],
 			"dx": [
 				"adobe-source-code-pro-fonts",
