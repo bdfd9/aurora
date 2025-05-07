@@ -57,7 +57,6 @@
 				"samba-winbind-modules",
 				"scx-scheds",
 				"setools-console",
-				"skanpage",
 				"sssd-ad",
 				"sssd-ipa",
 				"sssd-krb5",
@@ -218,6 +217,7 @@
 				"sysprof",
 				"tiptop",
 				"trace-cmd",
+				"ublue-os-libvirt-workarounds",
 				"udica",
 				"umoci",
 				"virt-manager",
@@ -228,8 +228,12 @@
 		},
 		"exclude": {
 			"all": [
+				"fedora-bookmarks",
+				"fedora-chromium-config",
+				"fedora-chromium-config-kde",
 				"firefox",
 				"firefox-langpacks",
+				"kcharselect",
 				"krfb",
 				"krfb-libs",
 				"podman-docker"
@@ -255,7 +259,6 @@
 		"include": {
 			"all": [
 				"google-noto-fonts-all",
-				"uupd",
 				"fw-fanctrl"
       		],
 			"dx": []

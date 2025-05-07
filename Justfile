@@ -500,7 +500,8 @@ build-iso $image="aurora" $tag="latest" $flavor="main" ghcr="0" pipeline="0":
     fi
 
     # Fedora Version
-    FEDORA_VERSION=$(${PODMAN} inspect ${IMAGE_FULL} | jq -r '.[]["Config"]["Labels"]["ostree.linux"]' | grep -oP 'fc\K[0-9]+')
+    # FEDORA_VERSION=$(${PODMAN} inspect ${IMAGE_FULL} | jq -r '.[]["Config"]["Labels"]["ostree.linux"]' | grep -oP 'fc\K[0-9]+')
+    FEDORA_VERSION=41
 
     # Load Image into rootful podman
     if [[ "${UID}" -gt 0 && {{ ghcr }} == "0" && ! "${PODMAN}" =~ docker ]]; then
@@ -533,7 +534,8 @@ build-iso $image="aurora" $tag="latest" $flavor="main" ghcr="0" pipeline="0":
     mkdir -p /var/tmp
     chmod -R 1777 /var/tmp
     flatpak config --system --set languages "*"
-    flatpak remote-add --system flathub https://flathub.org/repo/flathub.flatpakrepo
+    flatpak remote-delete --system fedora
+    flatpak remote-add --system --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     flatpak install --system -y flathub ${flatpak_refs[@]}
     ostree refs --repo=\${FLATPAK_SYSTEM_DIR}/repo | grep '^deploy/' | grep -v 'org\.freedesktop\.Platform\.openh264' | sed 's/^deploy\///g' > /output/flatpaks-with-deps
     EOF
