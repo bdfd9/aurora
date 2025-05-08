@@ -14,7 +14,6 @@ systemctl enable dconf-update.service
 systemctl enable rpm-ostreed-automatic.timer
 systemctl enable usr-share-sddm-themes.mount
 systemctl enable ublue-fix-hostname.service
-systemctl enable check-sb-key.service
 
 #Add the Flathub Flatpak remote and remove the Fedora Flatpak remote
 flatpak remote-add --system --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
