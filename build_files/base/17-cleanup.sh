@@ -12,10 +12,8 @@ systemctl enable rpm-ostree-countme.service
 systemctl enable tailscaled.service
 systemctl enable dconf-update.service
 systemctl enable rpm-ostreed-automatic.timer
-systemctl enable ublue-system-setup.service
 systemctl enable usr-share-sddm-themes.mount
 systemctl enable ublue-fix-hostname.service
-systemctl enable ublue-system-setup.service
 systemctl --global enable ublue-user-setup.service
 systemctl enable check-sb-key.service
 
