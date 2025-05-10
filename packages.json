@@ -151,7 +151,8 @@
 				"shadow-utils",
 				"perl-Image-ExifTool",
 				
-				"acpica-tools"
+				"acpica-tools",
+				"ksshaskpass"
 			],
 			"dx": [
 				"adobe-source-code-pro-fonts",
